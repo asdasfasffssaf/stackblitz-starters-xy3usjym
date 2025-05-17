@@ -1,5 +1,6 @@
 import { RichText } from '@graphcms/rich-text-react-renderer';
 import MobileMenu from './components/MobileMenu';
+export const revalidate = 10; // seconds
 
 type PageType = {
   title: string;
