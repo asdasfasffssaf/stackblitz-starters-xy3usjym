@@ -1,6 +1,14 @@
 import { RichText } from '@graphcms/rich-text-react-renderer';
 import MobileMenu from './components/MobileMenu';
 
+type PageType = {
+  title: string;
+  slug: string;
+  body: {
+    raw: any;
+  };
+};
+
 async function getPages() {
   const response = await fetch(process.env.NEXT_HYGRAPH_ENDPOINT!, {
     method: "POST",
@@ -24,7 +32,7 @@ async function getPages() {
 }
 
 export default async function Page() {
-  const pages = await getPages();
+  const pages: PageType[] = await getPages();
   
   return (
     <>
@@ -59,7 +67,7 @@ export default async function Page() {
         <div className="bg-black/90 text-white py-4 border-t border-gray-800">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-              {pages.map((page) => (
+              {pages.map((page: PageType) => (
                 <a 
                   href={`#${page.slug}`}
                   key={page.slug}
@@ -76,7 +84,7 @@ export default async function Page() {
       <main className="container mx-auto px-4 py-8 mt-0">
         <h1 className="text-4xl font-bold mb-8">All Pages</h1>
         <div className="grid gap-8">
-          {pages.map((page) => (
+          {pages.map((page: PageType) => (
             <div id={page.slug} key={page.slug} className="bg-white rounded-lg shadow-md p-8 scroll-mt-40">
               <h2 className="text-2xl text-gray-700 font-semibold mb-6">{page.title}</h2>
               <div className="prose max-w-none text-gray-700">
