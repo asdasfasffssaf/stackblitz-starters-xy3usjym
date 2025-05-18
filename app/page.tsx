@@ -45,18 +45,18 @@ export default async function Page() {
                 <h1 className="text-3xl font-bold">~</h1>
                 <h1 className="text-3xl font-bold">Tilde</h1>
                 <nav className="hidden md:flex space-x-6">
-                  <a href="/about" className="hover:text-gray-300">About</a>
-                  <a href="/projects" className="hover:text-gray-300">Projects</a>
-                  <a href="/contact" className="hover:text-gray-300">Contact</a>
+                  <a href="https://www.svtplay.se/kanaler" className="hover:text-gray-300">SVT PLAY</a>
+                  <a href="https://embed.ted.com/" className="hover:text-gray-300">TED</a>
+                  <a href="https://www.arte.tv" className="hover:text-gray-300">ARTE</a>
                 </nav>
               </div>
               
               <div className="hidden md:flex items-center space-x-4">
-                <a href="https://github.com/tilde-rocks" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300">
-                  GitHub
+                <a href="https://dyoidart.work" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300">
+                  Dyoid
                 </a>
-                <a href="https://twitter.com/tilde_rocks" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300">
-                  Twitter
+                <a href="https://dyoidart.work/dev" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300">
+                  Dev
                 </a>
               </div>
 
