@@ -18,7 +18,7 @@ async function getPages() {
     },
     body: JSON.stringify({
       query: `query Pages {
-        pages {
+        pages(orderBy: title_DESC) {
           title
           slug
           body {
@@ -46,7 +46,7 @@ export default async function Page() {
                 <h1 className="text-3xl font-bold">Tilde</h1>
                 <nav className="hidden md:flex space-x-6">
                   <a href="https://www.svtplay.se/kanaler" className="hover:text-gray-300">SVT PLAY</a>
-                  <a href="https://embed.ted.com/" className="hover:text-gray-300">TED</a>
+                  <a href="https://embed.ted.com" className="hover:text-gray-300">TED</a>
                   <a href="https://www.arte.tv" className="hover:text-gray-300">ARTE</a>
                 </nav>
               </div>

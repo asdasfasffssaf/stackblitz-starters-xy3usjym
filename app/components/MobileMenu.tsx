@@ -21,14 +21,14 @@ export default function MobileMenu() {
 
       <div className={`${isOpen ? '' : 'hidden'} md:hidden mt-4 pb-4`}>
         <nav className="flex flex-col space-y-4">
-          <a href="/about" className="hover:text-gray-300">About</a>
-          <a href="/projects" className="hover:text-gray-300">Projects</a>
-          <a href="/contact" className="hover:text-gray-300">Contact</a>
-          <a href="https://github.com/tilde-rocks" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300">
-            GitHub
+          <a href="https://www.svtplay.se/kanaler" className="hover:text-gray-300">SVT PLAY</a>
+          <a href="https://embed.ted.com" className="hover:text-gray-300">TED</a>
+          <a href="https://www.arte.tv" className="hover:text-gray-300">ARTE</a>
+          <a href="https://dyoidart.work" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300">
+            Dyoid
           </a>
-          <a href="https://twitter.com/tilde_rocks" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300">
-            Twitter
+          <a href="https://dyoidart.work/dev" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300">
+            Dev
           </a>
         </nav>
       </div>
