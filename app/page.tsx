@@ -1,5 +1,4 @@
 import { RichText } from '@graphcms/rich-text-react-renderer';
-import MobileMenu from './components/MobileMenu';
 export const revalidate = 10; // seconds
 
 type PageType = {
@@ -38,41 +37,28 @@ export default async function Page() {
   return (
     <>
       <header className="fixed top-0 left-0 right-0 z-50">
-        <div className="bg-black text-white py-4">
+        <div className="bg-gray-300 text-white py-1">
           <div className="container mx-auto px-4">
-            <div className="flex justify-between items-center">
-              <div className="flex items-center space-x-6">
-                <h1 className="text-3xl font-bold">~</h1>
-                <h1 className="text-3xl font-bold">Tilde</h1>
-                <nav className="hidden md:flex space-x-6">
-                  <a href="https://www.svtplay.se/kanaler" className="hover:text-gray-300">SVT PLAY</a>
-                  <a href="https://embed.ted.com" className="hover:text-gray-300">TED</a>
-                  <a href="https://www.arte.tv" className="hover:text-gray-300">ARTE</a>
-                </nav>
-              </div>
-              
-              <div className="hidden md:flex items-center space-x-4">
-                <a href="https://dyoidart.work" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300">
-                  Dyoid
-                </a>
-                <a href="https://dyoidart.work/dev" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300">
-                  Dev
-                </a>
-              </div>
-
-              <MobileMenu />
+            <div className="flex items-center justify-center space-x-6">
+              <h1 className="text-3xl font-bold">~</h1>
+              <h1 className="text-3xl font-bold">Tilde</h1>
+              <nav className="hidden md:flex space-x-6">
+                <a href="https://www.svtplay.se/kanaler" className="hover:text-black transition-colors duration-200 transform hover:scale-150 transition-transform duration-300">SVT PLAY</a>
+                <a href="https://embed.ted.com" className="hover:text-black transition-colors duration-200 transform hover:scale-150 transition-transform duration-300">TED</a>
+                <a href="https://www.arte.tv" className="hover:text-black transition-colors duration-200 transform hover:scale-150 transition-transform duration-300">ARTE</a>
+              </nav>
             </div>
           </div>
         </div>
         
-        <div className="bg-black/90 text-white py-4 border-t border-gray-800">
+        <div className="bg-transparent text-white py-1 border-t border-gray-800">
           <div className="container mx-auto px-4">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+            <div className="grid grid-cols-2 md:grid-cols-8 gap-0 text-center">
               {pages.map((page: PageType) => (
                 <a 
                   href={`#${page.slug}`}
                   key={page.slug}
-                  className="text-sm tracking-wider uppercase hover:text-gray-300 transition-colors duration-200"
+                  className="text-sm tracking-wider uppercase hover:text-white hover:bg-black transition-colors duration-200 transform hover:scale-150 transition-transform duration-300"
                 >
                   {page.title}
                 </a>
@@ -82,12 +68,12 @@ export default async function Page() {
         </div>
       </header>
 
-      <main className="container mx-auto px-4 py-8 mt-0">
-        <h1 className="text-4xl font-bold mb-8">All Pages</h1>
-        <div className="grid gap-8">
+      <main className="container mx-auto px-32 mt-0 mb-32">
+        <h1 className="text-4xl font-bold mb-8"></h1>
+        <div className="grid gap-64">
           {pages.map((page: PageType) => (
-            <div id={page.slug} key={page.slug} className="bg-white rounded-lg shadow-md p-8 scroll-mt-40">
-              <h2 className="text-2xl text-gray-700 font-semibold mb-6">{page.title}</h2>
+            <div id={page.slug} key={page.slug} className="bg-black p-0 scroll-mt-0">
+              <h2 className="text-4xl uppercase text-white text-right mb-1 p-1">{page.title}</h2>
               <div className="prose max-w-none text-gray-700">
                 <RichText content={page.body.raw} />
               </div>

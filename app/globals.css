@@ -24,16 +24,12 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
-  padding-top: 128px;
+  padding-top: 85px;
   scroll-behavior: smooth;
 }
 
 /* Header styles */
 header {
-  backdrop-filter: blur(5px);
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-header a {
-  transition: color 0.2s ease-in-out;
+  backdrop-filter: blur(1px);
+  background-color: rgba(0, 0, 0, 0.295);
 }
