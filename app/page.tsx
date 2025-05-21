@@ -42,7 +42,7 @@ export default async function Page() {
             <div className="flex items-center justify-center space-x-6">
               <h1 className="text-3xl font-bold">~</h1>
               <h1 className="text-3xl font-bold">Tilde</h1>
-              <nav className="hidden md:flex space-x-6">
+              <nav className="flex flex-row gap-4">
                 <a href="https://www.svtplay.se/kanaler" className="hover:text-black transition-colors duration-200 transform hover:scale-150 transition-transform duration-300">SVT PLAY</a>
                 <a href="https://embed.ted.com" className="hover:text-black transition-colors duration-200 transform hover:scale-150 transition-transform duration-300">TED</a>
                 <a href="https://www.arte.tv" className="hover:text-black transition-colors duration-200 transform hover:scale-150 transition-transform duration-300">ARTE</a>
@@ -53,12 +53,12 @@ export default async function Page() {
         
         <div className="bg-transparent text-white py-1 border-t border-gray-800">
           <div className="container mx-auto px-4">
-            <div className="grid grid-cols-2 md:grid-cols-8 gap-0 text-center">
+            <div className="grid grid-cols-2 md:grid-cols-8 gap-8 text-center">
               {pages.map((page: PageType) => (
                 <a 
                   href={`#${page.slug}`}
                   key={page.slug}
-                  className="text-sm tracking-wider uppercase hover:text-white hover:bg-black transition-colors duration-200 transform hover:scale-150 transition-transform duration-300"
+                  className="text-sm tracking-wider uppercase hover:text-white transform hover:scale-150 transition-transform duration-300"
                 >
                   {page.title}
                 </a>
