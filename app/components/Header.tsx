@@ -40,19 +40,19 @@ export default function Header({ pages }: { pages: PageType[] }) {
             <h1 className="text-3xl font-bold">Tilde</h1>
             <nav className="flex flex-row gap-4">
               <a
-                href="https://www.svtplay.se/kanaler"
+                href="https://www.svtplay.se/kanaler" target="_blank"
                 className="hover:text-gray-300 transition-colors duration-200 transform hover:scale-150 transition-transform duration-300"
               >
                 SVT PLAY
               </a>
               <a
-                href="https://embed.ted.com"
+                href="https://embed.ted.com" target="_blank"
                 className="hover:text-gray-300 transition-colors duration-200 transform hover:scale-150 transition-transform duration-300"
               >
                 TED
               </a>
               <a
-                href="https://www.arte.tv"
+                href="https://www.arte.tv" target="_blank"
                 className="hover:text-gray-300 transition-colors duration-200 transform hover:scale-150 transition-transform duration-300"
               >
                 ARTE

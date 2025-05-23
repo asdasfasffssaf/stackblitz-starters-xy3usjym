@@ -18,7 +18,7 @@ async function getPages() {
     },
     body: JSON.stringify({
       query: `query Pages {
-        pages(orderBy: title_DESC) {
+        pages(orderBy: publishedAt_DESC) {
           title
           slug
           body {
