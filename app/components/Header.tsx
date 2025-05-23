@@ -57,6 +57,18 @@ export default function Header({ pages }: { pages: PageType[] }) {
               >
                 ARTE
               </a>
+              <a
+                href="https://www.disneyplus.com/sv-se/home" target="_blank"
+                className="hover:text-gray-300 transition-colors duration-200 transform hover:scale-150 transition-transform duration-300"
+              >
+                Disney+
+              </a>
+              <a
+                href="https://www.primevideo.com/region/eu/storefront" target="_blank"
+                className="hover:text-gray-300 transition-colors duration-200 transform hover:scale-150 transition-transform duration-300"
+              >
+                Prime
+              </a>
             </nav>
           </div>
         </div>
